@@ -1,0 +1,13 @@
+@use "../../styles/variables.module";
+
+.footer {
+    position: absolute;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: variables.$dark-background;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: variables.$common-white;
+    text-align: center;
+}
