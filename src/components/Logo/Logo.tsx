@@ -11,7 +11,7 @@ export const Logo = () => {
                 src={logo}
                 alt="Kabisa logo"
             />
-            <Typography my={1} variant="h4" textAlign="center">
+            <Typography variant="subtitle1" textAlign="center">
                 3D CSS Playground
             </Typography>
         </div>
