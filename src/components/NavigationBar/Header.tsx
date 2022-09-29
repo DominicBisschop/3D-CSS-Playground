@@ -1,7 +1,7 @@
 import * as React from "react";
 import {AppBar, Toolbar} from "@mui/material";
 
-export const NavigationBar = () => {
+export const Header = () => {
     return (
         <AppBar
             position="absolute"

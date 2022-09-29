@@ -1,0 +1,7 @@
+@use "../../styles/variables.module";
+
+.canvas {
+  width: 500px;
+  height: 500px;
+  background-color: variables.$grey;
+}

@@ -1,1 +1,10 @@
 @use "../../styles/variables.module";
+
+.list {
+  //color: variables.$white;
+
+  & .MuiTypography-root {
+    font-weight: bold;
+    color: yellow;
+  }
+}

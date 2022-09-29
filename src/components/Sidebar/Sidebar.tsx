@@ -2,6 +2,9 @@ import React from "react";
 import {Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar} from "@mui/material";
 import {Logo} from "../Logo/Logo";
 import {theme} from "../../styles/theme";
+import {Link} from "react-router-dom";
+import styles from "./styles.module.scss";
+import { Title } from "../Typography/Title/Title";
 
 export const Sidebar = () => {
     return (
@@ -29,20 +32,25 @@ export const Sidebar = () => {
                 <Logo/>
             </Toolbar>
             <Divider />
-            <List>
-                <ListItem disablePadding>
+
+            <List className={styles.list}>
+                <ListItem component={Link} to="/cube" disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="Cube" />
+                        <ListItemText
+                            primary={
+                                <Title tag="h4" size="sm" color={theme.palette.primary.light}>Cube</Title>
+                            }
+                        />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                <ListItem component={Link} to="/sphere" disablePadding>
                     <ListItemButton>
                         <ListItemText primary="Sphere" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                <ListItem component={Link} to="/box" disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="Pyramid" />
+                        <ListItemText primary="Box" />
                     </ListItemButton>
                 </ListItem>
             </List>
