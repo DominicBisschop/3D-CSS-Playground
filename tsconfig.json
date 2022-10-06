@@ -13,6 +13,7 @@
     "src/pages",
     "src/util",
     "src/styles",
+    "src/shapes",
     "src/custom.d.ts"
   ]
 }

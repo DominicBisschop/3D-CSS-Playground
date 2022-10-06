@@ -5,18 +5,31 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "standard-with-typescript",
     "prettier"
   ],
   "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ]
+      }
+    }
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "project": "/tsconfig.json"
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "react"
   ],
   "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "spaced-comment": "off"
   }
 }

@@ -12,7 +12,6 @@ import { Logo } from "../Logo/Logo";
 import { theme } from "../../styles/theme";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
-import { Title } from "../Typography/Title/Title";
 
 export const Sidebar = () => {
   return (
@@ -42,15 +41,14 @@ export const Sidebar = () => {
       <Divider />
 
       <List className={styles.list}>
+        <ListItem component={Link} to="/" disablePadding>
+          <ListItemButton>
+            <ListItemText primary="Home" />
+          </ListItemButton>
+        </ListItem>
         <ListItem component={Link} to="/cube" disablePadding>
           <ListItemButton>
-            <ListItemText
-              primary={
-                <Title tag="h4" size="sm" color={theme.palette.primary.light}>
-                  Cube
-                </Title>
-              }
-            />
+            <ListItemText primary="Cube" />
           </ListItemButton>
         </ListItem>
         <ListItem component={Link} to="/sphere" disablePadding>

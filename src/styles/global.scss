@@ -1,5 +1,9 @@
 @use "./variables.module";
 
+#root {
+  overflow-y: hidden;
+}
+
 html,
 body,
 #root,
