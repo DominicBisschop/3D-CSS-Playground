@@ -1,9 +1,5 @@
-import React from "react"
+import React from "react";
 
 export const BoxPage = () => {
-    return (
-        <>
-            Box page content here!
-        </>
-    )
-}
+  return <>Box page content here!</>;
+};
