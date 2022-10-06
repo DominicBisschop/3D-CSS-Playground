@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/config.module.scss";
 import { Title } from "../components/Typography/Title/Title";
 import { Canvas } from "../components/Canvas/Canvas";
-import { SpinningCube } from "../shapes/SpinningCube/SpinningCube";
+import { Cube } from "../shapes/Cube/Cube";
 
 export const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ export const HomePage = () => {
         Welcome to the 3D CSS Playground!
       </Title>
       <Canvas showBackground={false}>
-        <SpinningCube />
+        <Cube isSpinning={true} />
       </Canvas>
     </section>
   );
