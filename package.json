@@ -2,7 +2,7 @@
   "name": "3d-css-playground",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://dominicbisschop.github.io/3D-CSS-Playground",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
