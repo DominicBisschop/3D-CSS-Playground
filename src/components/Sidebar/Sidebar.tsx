@@ -51,9 +51,14 @@ export const Sidebar = () => {
             <ListItemText primary="Cube" />
           </ListItemButton>
         </ListItem>
-        <ListItem component={Link} to="/ball" disablePadding>
+        <ListItem component={Link} to="/simple-ball" disablePadding>
           <ListItemButton>
-            <ListItemText primary="Ball" />
+            <ListItemText primary="Simple Ball" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem component={Link} to="/advanced-ball" disablePadding>
+          <ListItemButton>
+            <ListItemText primary="Advanced Ball" />
           </ListItemButton>
         </ListItem>
         <ListItem component={Link} to="/box" disablePadding>

@@ -5,7 +5,7 @@ type Props = {
   isSpinning?: boolean;
 };
 
-export const BallSimple = ({ isSpinning }: Props) => {
+export const SimpleBall = ({ isSpinning }: Props) => {
   return (
     <div className={styles.scene}>
       <div className={styles.ball} />

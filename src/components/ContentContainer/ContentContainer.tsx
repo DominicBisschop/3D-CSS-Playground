@@ -4,7 +4,8 @@ import { Outlet, Route, Routes } from "react-router-dom";
 import { HomePage } from "../../pages/home";
 import { CubePage } from "../../pages/cube";
 import { BoxPage } from "../../pages/box";
-import { BallPage } from "../../pages/ball";
+import { SimpleBallPage } from "../../pages/simple-ball";
+import { AdvancedBallPage } from "../../pages/advanced-ball";
 
 export const ContentContainer = () => {
   return (
@@ -13,7 +14,9 @@ export const ContentContainer = () => {
         <Route index={true} element={<HomePage />} />
         {/*<Route index={true} element={<ContentContainer />} />*/}
         <Route path="/cube" element={<CubePage />} />
-        <Route path="/ball" element={<BallPage />} />
+        <Route path="/simple-ball" element={<SimpleBallPage />} />
+        <Route path="/advanced-ball" element={<AdvancedBallPage />} />
+        <Route path="/ball" element={<SimpleBallPage />} />
         <Route path="/box" element={<BoxPage />} />
       </Routes>
       <Outlet></Outlet>

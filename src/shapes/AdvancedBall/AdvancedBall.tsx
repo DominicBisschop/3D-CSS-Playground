@@ -6,7 +6,7 @@ type Props = {
   isSpinning?: boolean;
 };
 
-export const Ball = ({ isSpinning }: Props) => {
+export const AdvancedBall = ({ isSpinning }: Props) => {
   return (
     <div className={styles.ball}>
       <div className={classnames(styles.layer, styles.spinning)}>
