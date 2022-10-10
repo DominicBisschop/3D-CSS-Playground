@@ -1,0 +1,134 @@
+@use "../../styles/variables.module";
+@use "sass:color";
+
+$width: 300px;
+$height: 300px;
+
+.ball {
+  width: $width;
+  height: $height;
+  transform-style: preserve-3d;
+  transform: rotateX(-5deg);
+}
+
+.layer {
+  position: absolute;
+  width: $width;
+  height: $height;
+}
+
+.spinning {
+  transform-style: preserve-3d;
+  transform-origin: calc($width / 2) calc($height / 2);
+  animation: spinning 10s linear infinite;
+}
+
+.gridPlane {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+.xLine {
+  transform: translateY(1%) rotateX(90deg);
+}
+
+.xLine2 {
+  transform: translateY(-1%) rotateX(90deg);
+}
+
+.yLine {
+  transform: rotateY(90deg);
+}
+
+.zLine {
+  transform: rotateZ(90deg);
+}
+
+.clip {
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translateZ(-0);
+  border: 1px solid variables.$black;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes highlightAnimation {
+  0.00% {
+    left: -150.00%;
+    top: -178.00%
+  }
+  12.50% {
+    left: -117.67%;
+    top: -179.64%
+  }
+  25.00% {
+    left: -97.69%;
+    top: -195.87%
+  }
+  28.75% {
+    left: -95.00%;
+    top: -207.09%
+  }
+  32.50% {
+    left: -97.69%;
+    top: -220.70%
+  }
+  40.00% {
+    left: -117.67%;
+    top: -240.01%
+  }
+  47.50% {
+    left: -150.00%;
+    top: -247.50%
+  }
+  55.00% {
+    left: -182.33%;
+    top: -240.01%
+  }
+  62.50% {
+    left: -202.31%;
+    top: -220.70%
+  }
+  68.75% {
+    left: -205.00%;
+    top: -207.09%
+  }
+  75.00% {
+    left: -202.31%;
+    top: -195.87%
+  }
+  87.50% {
+    left: -182.33%;
+    top: -179.64%
+  }
+  100.00% {
+    left: -150.00%;
+    top: -178.00%
+  }
+}
+
+.shade {
+  position: relative;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: radial-gradient(at 50% 50%, variables.$red, darken(variables.$red, 25%), darken(variables.$red, 50%), variables.$black, variables.$black);
+  //animation: highlightAnimation 10s linear infinite;
+}
+
+.shadeSpinning {
+  animation: highlightAnimation 10s linear infinite;
+}
+
+
+

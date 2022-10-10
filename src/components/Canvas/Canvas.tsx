@@ -10,21 +10,24 @@ type Props = {
 
 export const Canvas: FC<Props> = ({
   children,
-  width = 500,
-  height = 500,
+  width,
+  height,
   showBackground = true,
 }) => {
+  const stylingProps =
+    width && height
+      ? ({
+          "--canvasHeight": `${height}px`,
+          "--canvasWidth": `${width}px`,
+        } as CSSProperties)
+      : undefined;
+
   return (
     <div
       className={classnames(styles.canvas, {
         [styles.background]: showBackground,
       })}
-      style={
-        {
-          "--canvasHeight": `${height}px`,
-          "--canvasWidth": `${width}px`,
-        } as CSSProperties
-      }
+      style={stylingProps}
     >
       {children}
     </div>

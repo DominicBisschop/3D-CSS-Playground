@@ -1,0 +1,16 @@
+@use "../../styles/variables.module";
+
+$width: 300px;
+$height: 300px;
+
+.scene {
+  .ball {
+    border-radius: 50%;
+    border: 1px solid variables.$black;
+    width: $width;
+    height: $height;
+    background-color: variables.$black;
+    background: radial-gradient(circle at calc($width / 3) calc($height / 3), variables.$red, variables.$black);
+  }
+}
+

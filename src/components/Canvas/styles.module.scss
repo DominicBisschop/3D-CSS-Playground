@@ -1,18 +1,15 @@
 @use "../../styles/variables.module";
 
-:root {
-  --canvasHeight: 500px;
-  --canvasWidth: 500px;
-}
-
 .canvas {
+  --canvasHeight: 500px;
+  --canvasWidth: 100%;
+
   width: var(--canvasWidth);
   height: var(--canvasHeight);
-  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  gap: 5rem;
 }
 
 .background {

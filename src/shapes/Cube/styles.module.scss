@@ -2,74 +2,74 @@
 
 $width: 250px;
 $height: 250px;
+$opacity: 0.8;
 
 .scene {
   width: $width;
   height: $height;
   perspective: 500px;
   user-select: none;
-}
 
-.cube {
-  width: $width;
-  height: $height;
-  position: relative;
-  transform-style: preserve-3d;
-  //transform: translateZ(-100px);
-}
-
-.cubeFace {
-  position: absolute;
-  width: $width;
-  height: $height;
-  border: 1px solid black;
-  line-height: $height;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-
-.cubeFaceFront {
-  background-color: variables.$red;
-  transform: rotateY(0deg) translateZ(125px);
-}
-
-.cubeFaceBack {
-  background-color: variables.$orange;
-  transform: rotateY(180deg) translateZ(125px);
-}
-
-.cubeFaceLeft {
-  background-color: variables.$yellow;
-  transform: rotateY(-90deg) translateZ(125px);
-}
-
-.cubeFaceRight {
-  background-color: variables.$blue;
-  transform: rotateY(90deg) translateZ(125px);
-}
-
-.cubeFaceTop {
-  background-color: variables.$purple;
-  transform: rotateX(90deg) translateZ(125px);
-}
-
-.cubeFaceBottom {
-  background-color: variables.$green;
-  transform: rotateX(-90deg) translateZ(125px);
-}
-
-.spinning {
-  animation: spin 10s infinite ease-in-out;
-}
-
-@keyframes spin {
-  0% {
-    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  .cube {
+    width: $width;
+    height: $height;
+    position: relative;
+    transform-style: preserve-3d;
+    //transform: translateZ(-100px);
   }
-  100% {
-    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+
+  .cubeFace {
+    position: absolute;
+    width: $width;
+    height: $height;
+    border: 1px solid variables.$black;
+    line-height: $height;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+  .cubeFaceFront {
+    background-color: rgba(variables.$red, $opacity);
+    transform: rotateY(0deg) translateZ(125px);
+  }
+
+  .cubeFaceBack {
+    background-color: rgba(variables.$orange, $opacity);
+    transform: rotateY(180deg) translateZ(125px);
+  }
+
+  .cubeFaceLeft {
+    background-color: rgba(variables.$yellow, $opacity);
+    transform: rotateY(-90deg) translateZ(125px);
+  }
+
+  .cubeFaceRight {
+    background-color: rgba(variables.$blue, $opacity);
+    transform: rotateY(90deg) translateZ(125px);
+  }
+
+  .cubeFaceTop {
+    background-color: rgba(variables.$purple, $opacity);
+    transform: rotateX(90deg) translateZ(125px);
+  }
+
+  .cubeFaceBottom {
+    background-color: rgba(variables.$green, $opacity);
+    transform: rotateX(-90deg) translateZ(125px);
+  }
+
+  .spinning {
+    animation: spin 10s infinite ease-in-out;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+    }
   }
 }
-

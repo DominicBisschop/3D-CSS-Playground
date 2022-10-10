@@ -2,17 +2,22 @@ import React from "react";
 import styles from "../styles/config.module.scss";
 import { Title } from "../components/Typography/Title/Title";
 import { Canvas } from "../components/Canvas/Canvas";
-import { Cube } from "../shapes/Cube/Cube";
+import { BallSimple } from "../shapes/BallSimple/BallSimple";
 import { Ball } from "../shapes/Ball/Ball";
 
-export const HomePage = () => {
+export const BallPage = () => {
   return (
     <section className={styles.pageContainer}>
       <Title tag="h1" size="lg">
-        Welcome to the 3D CSS Playground!
+        Simple Ball
       </Title>
-      <Canvas showBackground={false}>
-        <Cube isSpinning={true} />
+      <Canvas>
+        <BallSimple />
+      </Canvas>
+      <Title tag="h1" size="lg">
+        Rotating Advanced Ball
+      </Title>
+      <Canvas>
         <Ball isSpinning={true} />
       </Canvas>
     </section>
