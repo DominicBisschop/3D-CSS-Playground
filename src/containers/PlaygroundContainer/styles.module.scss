@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+
+  section {
+    &:nth-child(1), &:nth-child(2) {
+      flex-basis: calc(50% - 1rem);
+    }
+
+    &:nth-child(3) {
+      flex-basis: 100%;
+    }
+  }
+}

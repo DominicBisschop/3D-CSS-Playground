@@ -1,29 +1,29 @@
 import React, { FC } from "react";
-import { Title } from "../Typography/Title/Title";
-import { Canvas } from "../Canvas/Canvas";
+import { Title } from "../../components/Typography/Title/Title";
+import { Canvas } from "../../components/Canvas/Canvas";
 
 type Props = {
-  title: string;
+  title?: string;
   showBackground?: boolean;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
 };
 
 export const ShapeContainer: FC<Props> = ({
-  title,
+  title = "Shape",
   children,
   showBackground = true,
   width,
   height,
 }) => {
   return (
-    <>
+    <section>
       <Title tag="h1" size="lg">
         {title}
       </Title>
       <Canvas width={width} height={height} showBackground={showBackground}>
         {children}
       </Canvas>
-    </>
+    </section>
   );
 };

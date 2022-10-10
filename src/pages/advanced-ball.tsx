@@ -1,14 +1,18 @@
 import React from "react";
-import styles from "../styles/config.module.scss";
 import { AdvancedBall } from "../shapes/AdvancedBall/AdvancedBall";
-import { ShapeContainer } from "../components/ShapeContainer/ShapeContainer";
+import { ShapeContainer } from "../containers/ShapeContainer/ShapeContainer";
+import { ControlsContainer } from "../containers/ControlsContainer/ControlsContainer";
+import { CodeBlockContainer } from "../containers/CodeBlockContainer/CodeBlockContainer";
+import { PlaygroundContainer } from "../containers/PlaygroundContainer/PlaygroundContainer";
 
 export const AdvancedBallPage = () => {
   return (
-    <section className={styles.pageContainer}>
-      <ShapeContainer title="Advanced Ball">
+    <PlaygroundContainer>
+      <ShapeContainer>
         <AdvancedBall isSpinning={true} />
       </ShapeContainer>
-    </section>
+      <ControlsContainer />
+      <CodeBlockContainer />
+    </PlaygroundContainer>
   );
 };

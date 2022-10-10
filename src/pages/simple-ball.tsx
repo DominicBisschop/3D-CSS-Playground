@@ -1,14 +1,18 @@
 import React from "react";
-import styles from "../styles/config.module.scss";
 import { SimpleBall } from "../shapes/SimpleBall/SimpleBall";
-import { ShapeContainer } from "../components/ShapeContainer/ShapeContainer";
+import { ShapeContainer } from "../containers/ShapeContainer/ShapeContainer";
+import { ControlsContainer } from "../containers/ControlsContainer/ControlsContainer";
+import { CodeBlockContainer } from "../containers/CodeBlockContainer/CodeBlockContainer";
+import { PlaygroundContainer } from "../containers/PlaygroundContainer/PlaygroundContainer";
 
 export const SimpleBallPage = () => {
   return (
-    <section className={styles.pageContainer}>
-      <ShapeContainer title="Simple Ball">
+    <PlaygroundContainer>
+      <ShapeContainer>
         <SimpleBall isSpinning={true} />
       </ShapeContainer>
-    </section>
+      <ControlsContainer />
+      <CodeBlockContainer />
+    </PlaygroundContainer>
   );
 };

@@ -1,11 +1,18 @@
 import React from "react";
-import styles from "../styles/config.module.scss";
-import { ShapeContainer } from "../components/ShapeContainer/ShapeContainer";
+import { ShapeContainer } from "../containers/ShapeContainer/ShapeContainer";
+import { Box } from "../shapes/Box/Box";
+import { ControlsContainer } from "../containers/ControlsContainer/ControlsContainer";
+import { CodeBlockContainer } from "../containers/CodeBlockContainer/CodeBlockContainer";
+import { PlaygroundContainer } from "../containers/PlaygroundContainer/PlaygroundContainer";
 
 export const BoxPage = () => {
   return (
-    <section className={styles.pageContainer}>
-      <ShapeContainer title="Box"></ShapeContainer>
-    </section>
+    <PlaygroundContainer>
+      <ShapeContainer>
+        <Box isSpinning={true} />
+      </ShapeContainer>
+      <ControlsContainer />
+      <CodeBlockContainer />
+    </PlaygroundContainer>
   );
 };

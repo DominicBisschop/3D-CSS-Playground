@@ -5,7 +5,7 @@ import classnames from "classnames";
 
 type Props = {
   size?: TitleSize;
-  tag: "h1" | "h2" | "h3" | "h4";
+  tag: "h1" | "h2" | "h3" | "h4" | "p" | "span";
 } & HTMLAttributes<HTMLHeadingElement>;
 
 export const Title: FC<Props> = ({ children, tag, size = "lg" }) => {

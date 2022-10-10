@@ -1,0 +1,14 @@
+@use "../../styles/variables.module";
+
+.card {
+  --cardHeight: 500px;
+
+  display: block;
+  flex-direction: column;
+  width: 100%;
+  height: var(--cardHeight);
+  gap: 1rem;
+  border: 1px solid variables.$black;
+  border-radius: 5px;
+  padding: 1rem;
+}

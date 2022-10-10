@@ -1,0 +1,98 @@
+@use "../../styles/variables.module";
+
+$width: 300px;
+$height: 200px;
+$depth: 100px;
+$opacity: 0.8;
+
+.scene {
+  width: $width;
+  height: $height;
+  perspective: 500px;
+  user-select: none;
+
+  .box {
+    width: $width;
+    height: $height;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(- calc($depth / 2));
+  }
+
+  .boxFace {
+    position: absolute;
+    border: 1px solid variables.$black;
+    line-height: $height;
+    font-size: 2rem;
+    font-weight: bold;
+    color: variables.$white;
+    text-align: center;
+  }
+
+  .boxFaceFront {
+    background-color: rgba(variables.$red, $opacity);
+    transform: rotateY(0deg) translateZ(50px);
+  }
+
+  .boxFaceBack {
+    background-color: rgba(variables.$orange, $opacity);
+    transform: rotateY(180deg) translateZ(50px);
+  }
+
+  .boxFaceLeft {
+    background-color: rgba(variables.$yellow, $opacity);
+    transform: rotateY(-90deg) translateZ(150px);
+  }
+
+  .boxFaceRight {
+    background-color: rgba(variables.$blue, $opacity);
+    transform: rotateY(90deg) translateZ(150px);
+  }
+
+  .boxFaceTop {
+    background-color: rgba(variables.$purple, $opacity);
+    transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .boxFaceBottom {
+    background-color: rgba(variables.$green, $opacity);
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  .boxFaceFront,
+  .boxFaceBack {
+    width: $width;
+    height: $height;
+    line-height: $height;
+  }
+
+  .boxFaceRight,
+  .boxFaceLeft {
+    width: $depth;
+    height: $height;
+    left: $depth;
+    line-height: $height;
+  }
+
+  .boxFaceTop,
+  .boxFaceBottom {
+    width: $width;
+    height: $depth;
+    top: calc($depth / 2);
+    line-height: $depth;
+  }
+
+
+  .spinning {
+    animation: spin 10s infinite ease-in-out;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateZ(- calc($height / 2)) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+      transform: translateZ(- calc($height / 2)) rotateX(360deg) rotateY(360deg);
+    }
+  }
+}

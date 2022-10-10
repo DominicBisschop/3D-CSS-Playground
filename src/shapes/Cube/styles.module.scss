@@ -1,63 +1,62 @@
 @use "../../styles/variables.module";
 
-$width: 250px;
-$height: 250px;
+$size: 250px;
 $opacity: 0.8;
 
 .scene {
-  width: $width;
-  height: $height;
+  width: $size;
+  height: $size;
   perspective: 500px;
   user-select: none;
 
   .cube {
-    width: $width;
-    height: $height;
+    width: $size;
+    height: $size;
     position: relative;
     transform-style: preserve-3d;
-    //transform: translateZ(-100px);
+    transform: translateZ(- calc($size / 2));
   }
 
   .cubeFace {
     position: absolute;
-    width: $width;
-    height: $height;
+    width: $size;
+    height: $size;
     border: 1px solid variables.$black;
-    line-height: $height;
-    font-size: 40px;
+    line-height: $size;
+    font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: variables.$white;
     text-align: center;
   }
 
   .cubeFaceFront {
     background-color: rgba(variables.$red, $opacity);
-    transform: rotateY(0deg) translateZ(125px);
+    transform: rotateY(0deg) translateZ(calc($size / 2));
   }
 
   .cubeFaceBack {
     background-color: rgba(variables.$orange, $opacity);
-    transform: rotateY(180deg) translateZ(125px);
+    transform: rotateY(180deg) translateZ(calc($size / 2));
   }
 
   .cubeFaceLeft {
     background-color: rgba(variables.$yellow, $opacity);
-    transform: rotateY(-90deg) translateZ(125px);
+    transform: rotateY(-90deg) translateZ(calc($size / 2));
   }
 
   .cubeFaceRight {
     background-color: rgba(variables.$blue, $opacity);
-    transform: rotateY(90deg) translateZ(125px);
+    transform: rotateY(90deg) translateZ(calc($size / 2));
   }
 
   .cubeFaceTop {
     background-color: rgba(variables.$purple, $opacity);
-    transform: rotateX(90deg) translateZ(125px);
+    transform: rotateX(90deg) translateZ(calc($size / 2));
   }
 
   .cubeFaceBottom {
     background-color: rgba(variables.$green, $opacity);
-    transform: rotateX(-90deg) translateZ(125px);
+    transform: rotateX(-90deg) translateZ(calc($size / 2));
   }
 
   .spinning {
@@ -66,10 +65,10 @@ $opacity: 0.8;
 
   @keyframes spin {
     0% {
-      transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+      transform: translateZ(- calc($size / 2)) rotateX(0deg) rotateY(0deg);
     }
     100% {
-      transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+      transform: translateZ(- calc($size / 2)) rotateX(360deg) rotateY(360deg);
     }
   }
 }

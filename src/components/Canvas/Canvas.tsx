@@ -4,8 +4,8 @@ import classnames from "classnames";
 
 type Props = {
   showBackground?: boolean;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
 };
 
 export const Canvas: FC<Props> = ({
@@ -17,8 +17,8 @@ export const Canvas: FC<Props> = ({
   const stylingProps =
     width && height
       ? ({
-          "--canvasHeight": `${height}px`,
-          "--canvasWidth": `${width}px`,
+          "--canvasHeight": `${height}`,
+          "--canvasWidth": `${width}`,
         } as CSSProperties)
       : undefined;
 
