@@ -1,12 +1,21 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import styles from "./styles.module.scss";
 import classnames from "classnames";
+import usePlaygroundContext from "../../context/usePlaygroundContext";
 
 type Props = {
   isSpinning?: boolean;
 };
 
 export const Cube = ({ isSpinning }: Props) => {
+  const { cubeConfig } = usePlaygroundContext();
+
+  const stylingProps = cubeConfig
+    ? ({
+        "--size": `${cubeConfig.size}`,
+      } as CSSProperties)
+    : undefined;
+
   return (
     <div className={styles.scene}>
       <div
